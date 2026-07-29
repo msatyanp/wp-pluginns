@@ -1,0 +1,147 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+  "version": 2,
+  "templateParts": [
+    {
+      "area": "header",
+      "name": "header",
+      "title": "Header"
+    },
+    {
+      "area": "footer",
+      "name": "footer",
+      "title": "Footer"
+    }
+  ],
+  "customTemplates": [
+    {
+      "name": "page",
+      "postTypes": ["page"],
+      "title": "Default Page"
+    },
+    {
+      "name": "home",
+      "postTypes": ["page"],
+      "title": "Home Page"
+    },
+    {
+      "name": "index",
+      "postTypes": ["page", "post"],
+      "title": "Blog Home"
+    }
+  ],
+  "settings": {
+    "color": {
+      "defaultDuotone": false,
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        {
+          "color": "#511b20",
+          "name": "Primary",
+          "slug": "primary"
+        },
+        {
+          "color": "#2d0f11",
+          "name": "Primary Dark",
+          "slug": "primary-dark"
+        },
+        {
+          "color": "#7a1f1f",
+          "name": "Secondary",
+          "slug": "secondary"
+        },
+        {
+          "color": "#c93f00",
+          "name": "Accent",
+          "slug": "accent"
+        },
+        {
+          "color": "#ff8c00",
+          "name": "Accent Light",
+          "slug": "accent-light"
+        },
+        {
+          "color": "#ffffff",
+          "name": "White",
+          "slug": "white"
+        },
+        {
+          "color": "#f9f7f4",
+          "name": "Cream",
+          "slug": "cream"
+        },
+        {
+          "color": "#1a1818",
+          "name": "Dark",
+          "slug": "dark"
+        },
+        {
+          "color": "#b8860b",
+          "name": "Gold",
+          "slug": "gold"
+        },
+        {
+          "color": "#d4af37",
+          "name": "Gold Light",
+          "slug": "gold-light"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Inter\", \"Helvetica Neue\", Arial, sans-serif",
+          "name": "Inter",
+          "slug": "inter"
+        },
+        {
+          "fontFamily": "\"Noto Sans Devanagari\", sans-serif",
+          "name": "Noto Sans Devanagari",
+          "slug": "devanagari"
+        },
+        {
+          "fontFamily": "\"Tiro Devanagari Hindi\", \"Noto Serif Devanagari\", Georgia, serif",
+          "name": "Tiro Devanagari Hindi",
+          "slug": "ranjana"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1600px"
+    },
+    "spacing": {
+      "units": ["px", "rem", "vh", "vw"]
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--inter)",
+      "fontSize": "1rem",
+      "lineHeight": "1.6"
+    },
+    "color": {
+      "background": "var(--wp--preset--color--white)",
+      "text": "var(--wp--preset--color--dark)"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--inter)",
+          "fontWeight": "700",
+          "lineHeight": "1.2"
+        },
+        "color": {
+          "text": "var(--wp--preset--color--primary)"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--secondary)"
+        }
+      }
+    }
+  }
+}

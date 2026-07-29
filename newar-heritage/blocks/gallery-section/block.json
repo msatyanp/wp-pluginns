@@ -1,0 +1,15 @@
+{
+  "apiVersion": 2,
+  "name": "newar-home/gallery-section",
+  "title": "Gallery Section",
+  "category": "newar-home",
+  "icon": "format-gallery",
+  "description": "Photo gallery grid.",
+  "keywords": [ "gallery", "photos", "home" ],
+  "supports": {
+    "html": false,
+    "align": [ "full", "wide" ]
+  },
+  "textdomain": "newar-heritage",
+  "render": "blocks/block-gallery-section.php"
+}

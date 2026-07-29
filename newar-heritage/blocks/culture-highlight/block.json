@@ -1,0 +1,15 @@
+{
+  "apiVersion": 2,
+  "name": "newar-home/culture-highlight",
+  "title": "Culture Highlight",
+  "category": "newar-home",
+  "icon": "feedback",
+  "description": "Cultural highlight with title, subtitle, tags and tabs.",
+  "keywords": [ "culture", "tradition", "home" ],
+  "supports": {
+    "html": false,
+    "align": [ "full", "wide" ]
+  },
+  "textdomain": "newar-heritage",
+  "render": "blocks/block-culture-highlight.php"
+}

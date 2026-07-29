@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 6" width="300" height="6" aria-hidden="true" focusable="false">
+  <!--
+    Carved wood strut (tundal) repeating geometric pattern.
+    Traditional Newari tundal are carved wooden struts that
+    support the multi-tiered roof of temples and civic buildings.
+    This pattern uses small alternating rectangles and triangles
+    to evoke the interlocking geometric cuts found in those struts.
+  -->
+  <rect width="300" height="6" fill="#5A3A29"/>
+  <rect x="0"   y="0" width="12" height="6" fill="#F4EDE0" opacity="0.6"/>
+  <rect x="14"  y="0" width="12" height="6" fill="#A6462B" opacity="0.5"/>
+  <rect x="28"  y="0" width="12" height="6" fill="#F4EDE0" opacity="0.6"/>
+  <rect x="42"  y="0" width="12" height="6" fill="#A6462B" opacity="0.5"/>
+  <rect x="56"  y="0" width="12" height="6" fill="#F4EDE0" opacity="0.6"/>
+  <rect x="70"  y="0" width="12" height="6" fill="#A6462B" opacity="0.5"/>
+  <rect x="84"  y="0" width="12" height="6" fill="#F4EDE0" opacity="0.6"/>
+  <rect x="98"  y="0" width="12" height="6" fill="#A6462B" opacity="0.5"/>
+  <rect x="112" y="0" width="12" height="6" fill="#F4EDE0" opacity="0.6"/>
+  <rect x="126" y="0" width="12" height="6" fill="#A6462B" opacity="0.5"/>
+  <rect x="140" y="0" width="12" height="6" fill="#F4EDE0" opacity="0.6"/>
+  <rect x="154" y="0" width="12" height="6" fill="#A6462B" opacity="0.5"/>
+  <rect x="168" y="0" width="12" height="6" fill="#F4EDE0" opacity="0.6"/>
+  <rect x="182" y="0" width="12" height="6" fill="#A6462B" opacity="0.5"/>
+  <rect x="196" y="0" width="12" height="6" fill="#F4EDE0" opacity="0.6"/>
+  <rect x="210" y="0" width="12" height="6" fill="#A6462B" opacity="0.5"/>
+  <rect x="224" y="0" width="12" height="6" fill="#F4EDE0" opacity="0.6"/>
+  <rect x="238" y="0" width="12" height="6" fill="#A6462B" opacity="0.5"/>
+  <rect x="252" y="0" width="12" height="6" fill="#F4EDE0" opacity="0.6"/>
+  <rect x="266" y="0" width="12" height="6" fill="#A6462B" opacity="0.5"/>
+  <rect x="280" y="0" width="20" height="6" fill="#F4EDE0" opacity="0.6"/>
+  <!-- Small diamond accents at intersections — echoing the nail-head
+       ornamental details found on authentic tundal carvings -->
+  <polygon points="6,1 10,3 6,5 2,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="20,1 24,3 20,5 16,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="34,1 38,3 34,5 30,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="48,1 52,3 48,5 44,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="62,1 66,3 62,5 58,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="76,1 80,3 76,5 72,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="90,1 94,3 90,5 86,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="104,1 108,3 104,5 100,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="118,1 122,3 118,5 114,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="132,1 136,3 132,5 128,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="146,1 150,3 146,5 142,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="160,1 164,3 160,5 156,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="174,1 178,3 174,5 170,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="188,1 192,3 188,5 184,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="202,1 206,3 202,5 198,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="216,1 220,3 216,5 212,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="230,1 234,3 230,5 226,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="244,1 248,3 244,5 240,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="258,1 262,3 258,5 254,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="272,1 276,3 272,5 268,3" fill="#C89B3C" opacity="0.7"/>
+  <polygon points="286,1 290,3 286,5 282,3" fill="#C89B3C" opacity="0.7"/>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "apiVersion": 2,
+  "name": "newar-home/stats-section",
+  "title": "Stats Section",
+  "category": "newar-home",
+  "icon": "chart-bar",
+  "description": "Stats banner with numbers.",
+  "keywords": [ "stats", "numbers", "home" ],
+  "supports": {
+    "html": false,
+    "align": [ "full", "wide" ]
+  },
+  "textdomain": "newar-heritage",
+  "render": "blocks/block-stats-section.php"
+}

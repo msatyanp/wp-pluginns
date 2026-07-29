@@ -1,0 +1,15 @@
+{
+  "apiVersion": 2,
+  "name": "newar-home/heritage-cards",
+  "title": "Heritage Cards",
+  "category": "newar-home",
+  "icon": "screenoptions",
+  "description": "Vertical cards list.",
+  "keywords": [ "cards", "heritage", "home" ],
+  "supports": {
+    "html": false,
+    "align": [ "full", "wide" ]
+  },
+  "textdomain": "newar-heritage",
+  "render": "blocks/block-heritage-cards.php"
+}

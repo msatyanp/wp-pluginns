@@ -1,0 +1,857 @@
+/* ===== Newar Members — Self-Contained Front-end Styles =====
+   Scoped under .newar-members-wrap to avoid leaking into host theme.
+   Uses CSS custom properties with fallbacks so themes can override
+   colors via their own variables if desired.
+   ============================================================== */
+
+/* ── Design Tokens (override these in your theme if desired) ── */
+
+:root {
+    --newar-color-primary: #511b20;
+    --newar-color-accent: #c93f00;
+    --newar-color-gold: #C89B3C;
+    --newar-color-gold-light: #e0c878;
+    --newar-color-cream: #F4EDE0;
+    --newar-color-white: #ffffff;
+    --newar-color-light-grey: #f5f0e8;
+    --newar-color-border: #d4c5b0;
+    --newar-color-body: #2b2b2b;
+    --newar-font-heading: Georgia, 'Times New Roman', serif;
+    --newar-font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --newar-radius-sm: 4px;
+    --newar-radius-md: 8px;
+    --newar-radius-lg: 12px;
+    --newar-shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --newar-shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+    --newar-transition-fast: 0.2s ease;
+}
+
+/* ── Card Grid (Committee / Leadership) ── */
+
+.newar-members-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+    .newar-members-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .newar-members-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.newar-members-grid--leadership,
+.newar-members-grid--committee {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .newar-members-grid--leadership,
+    .newar-members-grid--committee {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.newar-member-card {
+    background-color: var(--newar-color-white);
+    border: 1px solid var(--newar-color-border);
+    border-radius: var(--newar-radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--newar-shadow-sm);
+    transition: transform var(--newar-transition-fast), box-shadow var(--newar-transition-fast), border-color var(--newar-transition-fast);
+}
+
+.newar-member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--newar-shadow-md);
+    border-color: var(--newar-color-gold);
+}
+
+.newar-member-card__photo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.newar-member-card__photo > img,
+.newar-member-card__photo > .newar-member-photo,
+.newar-member-card__photo > .newar-member-thumb,
+.newar-member-card__photo > .newar-member-thumb--lg,
+.newar-member-card__photo > .newar-member-initials {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.newar-member-photo,
+.newar-member-thumb {
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid var(--newar-color-gold);
+    background-color: var(--newar-color-light-grey);
+    box-sizing: border-box;
+}
+
+.newar-member-thumb--small {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    font-size: 12px;
+}
+
+.newar-member-thumb--lg {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+    font-size: 1.8rem;
+}
+
+.newar-member-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--newar-color-primary);
+    color: var(--newar-color-gold-light);
+    font-weight: 700;
+    font-family: var(--newar-font-heading);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.newar-member-card__name {
+    font-family: var(--newar-font-heading);
+    font-size: 1.05rem;
+    color: var(--newar-color-primary);
+    margin-bottom: 0.25rem;
+}
+
+.newar-member-card__name a {
+    color: var(--newar-color-primary);
+    text-decoration: none;
+    transition: color var(--newar-transition-fast);
+}
+
+.newar-member-card__name a:hover {
+    color: var(--newar-color-accent);
+}
+
+.newar-member-card__role {
+    font-size: 0.85rem;
+    color: var(--newar-color-body);
+}
+
+/* ── Members Table (General Member tier) ── */
+
+.newar-members-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 1.5rem;
+}
+
+.newar-members-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.newar-members-table thead th {
+    background-color: var(--newar-color-primary);
+    color: var(--newar-color-cream);
+    font-family: var(--newar-font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 2px solid var(--newar-color-gold);
+}
+
+.newar-members-table tbody tr:nth-child(odd) {
+    background-color: var(--newar-color-white);
+}
+
+.newar-members-table tbody tr:nth-child(even) {
+    background-color: var(--newar-color-light-grey);
+}
+
+.newar-members-table tbody td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--newar-color-border);
+    vertical-align: middle;
+}
+
+.newar-members-table__sn {
+    text-align: center;
+    font-weight: 700;
+    color: var(--newar-color-primary);
+    width: 50px;
+}
+
+.newar-members-table__photo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.newar-members-table__photo > img,
+.newar-members-table__photo > .newar-member-photo,
+.newar-members-table__photo > .newar-member-thumb,
+.newar-members-table__photo > .newar-member-thumb--small,
+.newar-members-table__photo > .newar-member-thumb--lg,
+.newar-members-table__photo > .newar-member-initials {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.newar-members-table__name a {
+    color: var(--newar-color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--newar-transition-fast);
+}
+
+.newar-members-table__name a:hover {
+    color: var(--newar-color-accent);
+}
+
+.newar-members-table__address {
+    color: var(--newar-color-body);
+    max-width: 220px;
+    word-break: break-word;
+}
+
+.newar-members-search {
+    margin-bottom: 1rem;
+}
+
+.newar-table-search {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--newar-color-border);
+    border-radius: var(--newar-radius-md);
+    font-family: var(--newar-font-body);
+    font-size: 0.95rem;
+    transition: border-color var(--newar-transition-fast);
+}
+
+.newar-table-search:focus {
+    outline: none;
+    border-color: var(--newar-color-gold);
+}
+
+.newar-members-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--newar-color-border);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.newar-members-info {
+    font-size: 0.85rem;
+    color: var(--newar-color-body);
+}
+
+.newar-members-pagination {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.newar-members-pagination button {
+    padding: 0.25rem 0.5rem;
+    background-color: var(--newar-color-primary);
+    color: var(--newar-color-white);
+    border: none;
+    border-radius: var(--newar-radius-sm);
+    cursor: pointer;
+    font-family: var(--newar-font-heading);
+    font-size: 0.85rem;
+    transition: background-color var(--newar-transition-fast);
+}
+
+.newar-members-pagination button:hover {
+    background-color: var(--newar-color-accent);
+}
+
+.newar-members-pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ── Bhoj Host Callout ── */
+
+.newar-bhoj-callout {
+    background-color: color-mix(in srgb, var(--newar-color-primary) 90%, black) !important;
+    color: var(--newar-color-white) !important;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: var(--newar-radius-lg);
+    text-align: center;
+    border: 2px solid var(--newar-color-gold);
+    box-shadow: var(--newar-shadow-md);
+}
+
+.newar-bhoj-callout * {
+    color: var(--newar-color-white) !important;
+}
+
+.newar-bhoj-callout__heading {
+    font-family: var(--newar-font-heading);
+    font-size: 1.2rem;
+    color: var(--newar-color-white) !important;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.newar-bhoj-callout__heading .bhoj-year {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--newar-color-gold-light);
+    margin-left: 0.25em;
+}
+
+.newar-bhoj-callout__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.newar-bhoj-callout__card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: var(--newar-radius-md);
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.newar-bhoj-callout__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.newar-bhoj-callout__avatar .newar-member-thumb,
+.newar-bhoj-callout__avatar .newar-member-thumb--small {
+    color: var(--newar-color-cream) !important;
+}
+
+.newar-bhoj-callout__name {
+    font-family: var(--newar-font-heading);
+    font-size: 0.95rem;
+    color: var(--newar-color-white);
+    text-decoration: none;
+}
+
+.newar-bhoj-callout__name:hover {
+    text-decoration: underline;
+    color: var(--newar-color-gold-light);
+}
+
+/* ── Single Member Detail (fallback template) ── */
+
+.newar-member-detail__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1.25rem;
+    font-family: var(--newar-font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--newar-color-primary);
+    background-color: var(--newar-color-white);
+    border: 2px solid var(--newar-color-border);
+    border-radius: var(--newar-radius-md);
+    text-decoration: none;
+    transition: all var(--newar-transition-fast);
+    box-shadow: var(--newar-shadow-sm);
+}
+
+.newar-member-detail__back:hover {
+    background-color: var(--newar-color-primary);
+    color: var(--newar-color-white);
+    border-color: var(--newar-color-primary);
+    transform: translateX(-4px);
+    box-shadow: var(--newar-shadow-md);
+}
+
+.newar-member-detail {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.newar-member-detail__header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 3.5rem 2rem 2.5rem;
+    margin-bottom: 2.5rem;
+    background: linear-gradient(180deg, var(--newar-color-light-grey) 0%, var(--newar-color-white) 100%);
+    border-radius: var(--newar-radius-lg);
+    border: 1px solid var(--newar-color-border);
+    box-shadow: var(--newar-shadow-sm);
+}
+
+.newar-member-detail__header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--newar-color-gold);
+    border-radius: 2px;
+}
+
+.newar-member-detail__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--newar-color-white);
+    background-color: var(--newar-color-light-grey);
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px var(--newar-color-gold), var(--newar-shadow-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newar-member-detail__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.newar-member-detail__identity {
+    flex: 1;
+}
+
+.newar-member-detail__name {
+    font-family: var(--newar-font-heading);
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--newar-color-primary);
+    margin-bottom: 0.75rem;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+}
+
+.newar-member-detail__role {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--newar-color-white);
+    background-color: var(--newar-color-accent);
+    padding: 0.35rem 1rem;
+    border-radius: 2rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    box-shadow: var(--newar-shadow-sm);
+}
+
+.newar-member-detail__tier {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--newar-color-body);
+    opacity: 0.65;
+    letter-spacing: 0.02em;
+}
+
+.newar-member-detail__body {
+    padding: 0.5rem 0 3rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.newar-member-detail__section {
+    background-color: var(--newar-color-white);
+    border: 1px solid var(--newar-color-border);
+    border-radius: var(--newar-radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--newar-shadow-sm);
+    transition: box-shadow var(--newar-transition-fast);
+}
+
+.newar-member-detail__section:hover {
+    box-shadow: var(--newar-shadow-md);
+}
+
+.newar-member-detail__section--highlight {
+    border-left: 4px solid var(--newar-color-gold);
+    background-color: #fffcf5;
+}
+
+.newar-member-detail__body h2 {
+    font-family: var(--newar-font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--newar-color-gold);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--newar-color-border);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.newar-member-detail__body p,
+.newar-member-detail__body div {
+    line-height: 1.85;
+    color: var(--newar-color-body);
+    font-size: 1.02rem;
+}
+
+.newar-member-detail__address {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.newar-member-detail__address-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(81, 27, 32, 0.06);
+    color: var(--newar-color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.newar-member-detail__map-container {
+    margin-top: 0.75rem;
+}
+
+.newar-member-detail__map-container a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.5rem;
+    background-color: var(--newar-color-primary);
+    color: var(--newar-color-white);
+    font-family: var(--newar-font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: var(--newar-radius-md);
+    text-decoration: none;
+    border: 2px solid var(--newar-color-gold);
+    transition: all var(--newar-transition-fast);
+}
+
+.newar-member-detail__map-container a:hover {
+    background-color: var(--newar-color-accent);
+    transform: translateY(-2px);
+    color: var(--newar-color-white);
+    box-shadow: var(--newar-shadow-md);
+}
+
+.newar-member-detail__map-hint {
+    font-size: 0.85rem;
+    color: var(--newar-color-body);
+    opacity: 0.6;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+@media (max-width: 640px) {
+    .newar-member-detail__header {
+        padding: 2.5rem 1.25rem 2rem;
+    }
+
+    .newar-member-detail__name {
+        font-size: 1.65rem;
+    }
+
+    .newar-member-detail__photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .newar-member-detail__section {
+        padding: 1.25rem;
+    }
+}
+
+/* ── Committee / Leadership Slider ── */
+
+.newar-committee-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 3rem;
+}
+
+.newar-committee-slider__track {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0.5rem 0.25rem 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.newar-committee-slider__track::-webkit-scrollbar {
+    display: none;
+}
+
+.newar-committee-slider__slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: calc(25% - 1rem);
+    min-width: 220px;
+}
+
+.newar-committee-slider__slide-inner {
+    background-color: var(--newar-color-white);
+    border: 1px solid var(--newar-color-border);
+    border-radius: var(--newar-radius-lg);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: var(--newar-shadow-sm);
+    transition: transform var(--newar-transition-fast), box-shadow var(--newar-transition-fast), border-color var(--newar-transition-fast);
+    height: 100%;
+}
+
+.newar-committee-slider__slide-inner:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--newar-shadow-md);
+    border-color: var(--newar-color-gold);
+}
+
+.newar-committee-slider__photo {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--newar-color-gold);
+    background-color: var(--newar-color-light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.newar-committee-slider__photo > img,
+.newar-committee-slider__photo > .newar-member-photo,
+.newar-committee-slider__photo > .newar-member-thumb,
+.newar-committee-slider__photo > .newar-member-thumb--lg,
+.newar-committee-slider__photo > .newar-member-initials {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.newar-committee-slider__name {
+    font-family: var(--newar-font-heading);
+    font-size: 1rem;
+    color: var(--newar-color-primary);
+    margin-bottom: 0.35rem;
+    line-height: 1.3;
+}
+
+.newar-committee-slider__name a {
+    color: var(--newar-color-primary);
+    text-decoration: none;
+    transition: color var(--newar-transition-fast);
+}
+
+.newar-committee-slider__name a:hover {
+    color: var(--newar-color-accent);
+}
+
+.newar-committee-slider__role {
+    font-size: 0.85rem;
+    color: var(--newar-color-body);
+    line-height: 1.4;
+}
+
+.newar-committee-slider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--newar-color-white);
+    border: 1.5px solid var(--newar-color-border);
+    color: var(--newar-color-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--newar-shadow-sm);
+    transition: all var(--newar-transition-fast);
+    padding: 0;
+    opacity: 0.85;
+}
+
+.newar-committee-slider__arrow:hover {
+    background-color: var(--newar-color-primary);
+    color: var(--newar-color-white);
+    border-color: var(--newar-color-primary);
+    opacity: 1;
+    box-shadow: var(--newar-shadow-md);
+}
+
+.newar-committee-slider__arrow:active {
+    transform: translateY(-50%) scale(0.92);
+}
+
+.newar-committee-slider__arrow:focus-visible {
+    outline: 2px solid var(--newar-color-gold);
+    outline-offset: 2px;
+    opacity: 1;
+}
+
+.newar-committee-slider__arrow svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2;
+    transition: transform var(--newar-transition-fast);
+}
+
+.newar-committee-slider__arrow--prev:hover svg {
+    transform: translateX(-1px);
+}
+
+.newar-committee-slider__arrow--next:hover svg {
+    transform: translateX(1px);
+}
+
+.newar-committee-slider__arrow--prev {
+    left: 0.25rem;
+}
+
+.newar-committee-slider__arrow--next {
+    right: 0.25rem;
+}
+
+@media (max-width: 1024px) {
+    .newar-committee-slider__slide {
+        width: calc(33.333% - 1rem);
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .newar-committee-slider {
+        padding: 0 2.5rem;
+    }
+
+    .newar-committee-slider__slide {
+        width: calc(50% - 0.75rem);
+        min-width: 180px;
+    }
+
+    .newar-committee-slider__photo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .newar-committee-slider__photo > img,
+    .newar-committee-slider__photo > .newar-member-photo,
+    .newar-committee-slider__photo > .newar-member-thumb,
+    .newar-committee-slider__photo > .newar-member-thumb--lg,
+    .newar-committee-slider__photo > .newar-member-initials {
+        width: 70px;
+        height: 70px;
+    }
+
+    .newar-committee-slider__arrow {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .newar-committee-slider {
+        padding: 0 2.25rem;
+    }
+
+    .newar-committee-slider__slide {
+        width: 85%;
+        min-width: 160px;
+    }
+
+    .newar-committee-slider__photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .newar-committee-slider__photo > img,
+    .newar-committee-slider__photo > .newar-member-photo,
+    .newar-committee-slider__photo > .newar-member-thumb,
+    .newar-committee-slider__photo > .newar-member-thumb--lg,
+    .newar-committee-slider__photo > .newar-member-initials {
+        width: 80px;
+        height: 80px;
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "apiVersion": 2,
+  "name": "newar-home/home-hero",
+  "title": "Home Hero",
+  "category": "newar-home",
+  "icon": "cover-image",
+  "description": "Hero section with heading and tagline.",
+  "keywords": [ "hero", "banner", "home" ],
+  "supports": {
+    "html": false,
+    "align": [ "full", "wide" ]
+  },
+  "textdomain": "newar-heritage",
+  "render": "blocks/block-home-hero.php"
+}

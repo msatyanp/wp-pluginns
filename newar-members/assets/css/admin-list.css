@@ -1,0 +1,23 @@
+.column-member_photo {
+    width: 48px;
+    text-align: center;
+}
+
+.column-member_tier {
+    width: 110px;
+}
+
+.column-member_role {
+    width: 160px;
+}
+
+.column-display_order {
+    width: 60px;
+    text-align: center;
+}
+
+.newar-tier-warning {
+    margin: 6px 0 !important;
+    padding: 6px 10px !important;
+    border-color: #dba617 !important;
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40" width="80" height="40" aria-hidden="true" focusable="false">
+  <!--
+    Abstracted tiered pagoda roof silhouette — inspired by the
+    multi-eave rooflines of Newari temples (e.g., Nyatapola,
+    Boudhanath stupa). Each tier steps inward and upward,
+    with a simple finial at the peak. Used sparingly as a
+    section separator, not on every section.
+  -->
+  <polygon points="0,40 4,20 8,28 12,16 16,24 20,12 24,20 28,8 32,18 36,6 40,16 44,4 48,14 52,2 56,12 60,0 64,10 68,2 72,8 76,4 80,10 76,18 72,26 68,34 64,40" fill="#5A3A29"/>
+  <!-- Thin gold line along the roof edge — gilded finial trim -->
+  <polyline points="0,40 4,20 8,28 12,16 16,24 20,12 24,20 28,8 32,18 36,6 40,16 44,4 48,14 52,2 56,12 60,0 64,10 68,2 72,8 76,4 80,10" fill="none" stroke="#C89B3C" stroke-width="1.2"/>
+  <!-- Finial dot at the peak -->
+  <circle cx="60" cy="0" r="2" fill="#C89B3C"/>
+</svg>
